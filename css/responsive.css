@@ -1,0 +1,482 @@
+/* ============================================
+   HORTEN VØLING - Responsive Styles
+   Mobile-first approach
+   ============================================ */
+
+/* ============================================
+   TABLET STYLES (768px and up)
+   ============================================ */
+@media (min-width: 768px) {
+    /* Typography */
+    h1 {
+        font-size: var(--text-4xl);
+    }
+
+    h2 {
+        font-size: var(--text-3xl);
+    }
+
+    /* Hero */
+    .hero-content {
+        max-width: 600px;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* About */
+    .about-intro {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Form Row */
+    .form-row {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ============================================
+   DESKTOP STYLES (1024px and up)
+   ============================================ */
+@media (min-width: 1024px) {
+    /* Navigation */
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-main {
+        display: flex !important;
+    }
+
+    /* Hero */
+    .hero {
+        min-height: 75vh;
+    }
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Area Content */
+    .area-section .area-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Service Detail */
+    .service-detail-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* About */
+    .about-intro {
+        grid-template-columns: 2fr 1fr;
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr 1.5fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+}
+
+/* ============================================
+   MOBILE STYLES (below 768px)
+   ============================================ */
+@media (max-width: 767px) {
+    /* Root adjustments */
+    :root {
+        --text-4xl: 1.875rem;
+        --text-3xl: 1.5rem;
+        --text-2xl: 1.25rem;
+    }
+
+    /* Container */
+    .container {
+        padding: 0 var(--space-md);
+    }
+
+    /* Header */
+    .header-top {
+        display: none;
+    }
+
+    .header-main {
+        padding: var(--space-sm) 0;
+    }
+
+    .logo-tagline {
+        display: none;
+    }
+
+    /* Mobile Navigation */
+    .nav-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-main {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--color-white);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--space-xl);
+        z-index: 1000;
+    }
+
+    .nav-main.active {
+        display: flex;
+    }
+
+    .nav-main a {
+        font-size: var(--text-xl);
+        padding: var(--space-md);
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding: var(--space-3xl) 0;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: var(--text-base);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    /* Quick Contact */
+    .quick-contact .container {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    /* Sections */
+    .section {
+        padding: var(--space-3xl) 0;
+    }
+
+    .section-header {
+        margin-bottom: var(--space-xl);
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Area Content */
+    .area-section .area-content {
+        grid-template-columns: 1fr;
+    }
+
+    .area-map {
+        height: 300px;
+        order: -1;
+    }
+
+    /* CTA */
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+    /* Page Header */
+    .page-header {
+        padding: var(--space-xl) 0;
+    }
+
+    /* Service Detail */
+    .service-detail {
+        padding: var(--space-xl) 0;
+    }
+
+    .service-detail-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .service-detail:nth-child(even) .service-detail-content {
+        direction: ltr;
+    }
+
+    .service-detail-image {
+        order: -1;
+    }
+
+    .service-detail-image img {
+        height: 200px;
+    }
+
+    /* Pricing */
+    .pricing-items {
+        grid-template-columns: 1fr;
+    }
+
+    /* About */
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .about-image {
+        order: -1;
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Geographic List */
+    .geo-list {
+        grid-template-columns: 1fr;
+    }
+
+    /* Coverage Grid */
+    .coverage-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+    }
+
+    .contact-form-wrapper {
+        padding: var(--space-lg);
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+        text-align: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: var(--space-md);
+        text-align: center;
+    }
+
+    .footer-legal {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--space-md);
+    }
+
+    .footer-legal a {
+        margin-left: 0;
+    }
+}
+
+/* ============================================
+   SMALL MOBILE (below 375px)
+   ============================================ */
+@media (max-width: 374px) {
+    :root {
+        --text-4xl: 1.5rem;
+        --text-3xl: 1.25rem;
+    }
+
+    .btn {
+        padding: var(--space-sm) var(--space-md);
+        font-size: var(--text-sm);
+    }
+
+    .btn-lg {
+        padding: var(--space-md) var(--space-lg);
+        font-size: var(--text-base);
+    }
+
+    .service-card {
+        padding: var(--space-lg);
+    }
+
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* ============================================
+   LARGE DESKTOP (1200px and up)
+   ============================================ */
+@media (min-width: 1200px) {
+    /* Services Grid - 5 columns for homepage */
+    .home-services .services-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .services-grid .service-card:nth-child(n+6) {
+        display: none;
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+@media print {
+    .header,
+    .footer,
+    .nav-toggle,
+    .hero-buttons,
+    .cta-section,
+    .btn {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 20pt 0;
+        background: none;
+        color: #000;
+    }
+
+    .hero-overlay,
+    .hero-bg {
+        display: none;
+    }
+
+    .hero-title,
+    .hero-subtitle {
+        color: #000;
+    }
+
+    .section {
+        padding: 20pt 0;
+        page-break-inside: avoid;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 10pt;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY - Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================
+   HIGH CONTRAST MODE
+   ============================================ */
+@media (prefers-contrast: high) {
+    :root {
+        --color-primary: #0d3018;
+        --color-text: #000000;
+        --color-light: #ffffff;
+    }
+
+    .btn {
+        border-width: 3px;
+    }
+
+    .form-control {
+        border-width: 2px;
+    }
+}
+
+/* ============================================
+   DARK MODE PREFERENCE (optional)
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    /* Keep light mode for this traditional business */
+    /* Users in this demographic typically prefer light themes */
+}
